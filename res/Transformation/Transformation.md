@@ -10,8 +10,7 @@ I wonder what this really is... [enc](./enc) ''.join([chr((ord(flag[i]) << 8) + 
 
 ## SOLUTION 1
 
-根據他的提示可以使用線上工具，我使用的是Cyberchef  
-我們可以先猜開看他是怎麼加密的  
+根據他的提示可以使用線上工具，我使用的是Cyberchef我們可以先猜開看他是怎麼加密的  
 ''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])  
   
 1. for i in range(0, len(flag), 2)
