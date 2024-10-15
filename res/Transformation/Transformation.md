@@ -21,15 +21,15 @@ I wonder what this really is... [enc](./enc) ''.join([chr((ord(flag[i]) << 8) + 
     i從0每次跳過一格(0,2,4,6...)到最後(如果len(flag)是偶數的話則跳到倒數第二個字元)  
 第二步：  
     把flag[i]變成Unicode並且向右shift 8 bits  
-![shift_exp](Snipaste_2024-10-14_17-46-40.png)  
+![shift_exp](./picture/Snipaste_2024-10-14_17-46-40.png)  
 第三步：  
     加上上flag[i+1]  
-![shift_exp_added](Snipaste_2024-10-15_13-52-26.png)  
+![shift_exp_added](./picture/Snipaste_2024-10-15_13-52-26.png)  
     這裡可以知道它變成了UTF-16，所以在Cyberchef上把enc轉換成UTF-16
-![online_solution](image.png)
+![online_solution](./picture/image.png)
     那可以再細說一步，後面的BE、LE是什麼意思，這裡是因為要看他是最高有效位(MSB, Most Significant Bit)還是最低有效位(LSB, Most Significant Bit)，是要從前半部往後半部讀，還是由後半部往前半部讀，這會影響到顯示的順序，以下是Utf-16(LE)後的結果
 
-![LE_result](Snipaste_2024-10-15_14-06-25.png)
+![LE_result](./picture/Snipaste_2024-10-15_14-06-25.png)
 這樣就完成啦!(但其實還有一種方法)
 
 ## SOLUTION 2
